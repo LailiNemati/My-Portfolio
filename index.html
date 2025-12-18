@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-primary">PortfolioPro</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition">About</a>
+                    <a href="#projects" class="text-gray-700 hover:text-primary transition">Projects</a>
+                    <a href="#skills" class="text-gray-700 hover:text-primary transition">Skills</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-20 pt-16">
+        <div class="flex flex-col items-center space-y-8 p-4">
+            <a href="#home" class="text-xl text-gray-700 hover:text-primary transition">Home</a>
+            <a href="#about" class="text-xl text-gray-700 hover:text-primary transition">About</a>
+            <a href="#projects" class="text-xl text-gray-700 hover:text-primary transition">Projects</a>
+            <a href="#skills" class="text-xl text-gray-700 hover:text-primary transition">Skills</a>
+            <a href="#contact" class="text-xl text-gray-700 hover:text-primary transition">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Hi, I'm <span class="text-primary">Laili Nemati</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">Web Developer</h2>
+                    <p class="text-gray-600 mb-8">I create beautiful, functional websites and applications.</p>
+                    <a href="#contact" class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition">Get in touch</a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="me.jpg" alt="Profile" class="rounded-lg shadow-lg w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">About Me</h2>
+            <div class="md:flex">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <img src="about.jpg".jpg" alt="About Me" class="rounded-full w-64 h-64 object-cover shadow-lg">
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <p class="text-gray-600 mb-6">Hello! I'm Laili Nemati, a passionate web developer with 1 years of experience creating modern web applications.</p>
+                    <p class="text-gray-600 mb-6">I specialize in front-end development with expertise in HTML, CSS, JavaScript, and popular frameworks like React and Bootstrap.</p>
+                    <p class="text-gray-600 mb-8">When I'm not coding, you can find me biking, reading tech blogs, or experimenting with new web technologies.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 rounded-lg font-medium transition flex items-center">
+                            <i data-feather="download" class="mr-2"></i> Download CV
+                        </a>
+                        <a href="#contact" class="border border-gray-300 hover:border-primary text-gray-700 hover:text-primary px-6 py-2 rounded-lg font-medium transition">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="photo1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Weather Forcasting Website</h3>
+                        <p class="text-gray-600 mb-4">Real-time weather information with forecast for locations worldwide.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML & CSS</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">JS & API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="photo2.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Persian poem generator AI Website</h3>
+                        <p class="text-gray-600 mb-4">An AI-powered website that, in both Persian and English, creates poetry for you by writing a word in English or Persian.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">HTML & CSS</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">JS & AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="photo3.jpg" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Archive of Nostalgic Persian Love Songs</h3>
+                        <p class="text-gray-600 mb-4">A website where you can find, listen, enjoy, and download your favorite nostalgic songs.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">HTNL</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-100 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">My Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="code" class="text-primary" width="32" height="32"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Frontend</h3>
+                    <p class="text-gray-600">HTML, CSS, JavaScript, React</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="server" class="text-secondary" width="32" height="32"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Backend</h3>
+                    <p class="text-gray-600">Java, Python, a little Node.js</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-purple-500 bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="smartphone" class="text-purple-500" width="32" height="32"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Responsive Design</h3>
+                    <p class="text-gray-600">TailwindCSS, Bootstrap, Flexbox, Grid</p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-pink-500 bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="tool" class="text-pink-500" width="32" height="32"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Tools</h3>
+                    <p class="text-gray-600">Git, Github, VS Code, Figma, Canva</Canvas></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Get In Touch</h2>
+            <div class="md:flex">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="text-primary mr-4"></i>
+                            <span class="text-gray-600">laili.jobmail@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="phone" class="text-primary mr-4"></i>
+                            <span class="text-gray-600">+93 729 96 40 80</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="map-pin" class="text-primary mr-4"></i>
+                            <span class="text-gray-600">Herat, Afghanistan</span>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Connect With Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/LailiNemati" class="w-10 h-10 bg-gray-100 hover:bg-primary hover:text-white rounded-full flex items-center justify-center text-gray-700 transition">
+                                <i data-feather="github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/laili-nemati-0254a933b" class="w-10 h-10 bg-gray-100 hover:bg-blue-500 hover:text-white rounded-full flex items-center justify-center text-gray-700 transition">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-100 hover:bg-blue-400 hover:text-white rounded-full flex items-center justify-center text-gray-700 transition">
+                                <i data-feather="twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@LeiliNemati-d5g" class="w-10 h-10 bg-gray-100 hover:bg-red-500 hover:text-white rounded-full flex items-center justify-center text-gray-700 transition">
+                                <i data-feather="youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-xl font-bold">PortfolioPro</h2>
+                    <p class="mt-2 text-gray-400">Crafting digital experiences that matter.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Quick Links</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                            <li><a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Resources</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Tutorials</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Docs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider">Legal</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 PortfolioPro. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition mx-4">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition mx-4">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
